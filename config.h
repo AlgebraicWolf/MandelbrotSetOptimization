@@ -12,11 +12,18 @@ const double STARTING_POSITION_Y = -1.0;
 // Initial pixel step size
 const double INITIAL_STEP_SIZE = 3.0 / WINDOW_WIDTH;
 
+// Amount of steps per one move
+const unsigned int MOVE = WINDOW_WIDTH / 50;
+
 // Zoom coefficient (step *= ZOOM_COEFFICIENT)
 const double ZOOM_COEFFICIENT = 0.9;
 
 // Rendering settings
-const double DIVERGENCE_RADIUS = 2.0; // Radius of circle with centre in (0, 0) outside of which sequences of points are considered to diverge
-const unsigned int MAX_ITER = 50; // Number of iterations after which sequence of points is considered to converge
+const double DIVERGENCE_RADIUS = 2.0;  // Radius of circle with centre in (0, 0) outside of which sequences of points are considered to diverge
+const unsigned int MAX_ITER = 50;      // Number of iterations after which sequence of points is considered to converge
 
-#endif // MANDELBROT_CONFIG_H_
+// Benchmark settings
+const unsigned int BENCHMARK_ITERATIONS = 50;  // Number mandelbrot set rendering/display iterations
+// #define DISPLAY_BENCHMARK_FRAME                // Set this define in case benchmark frames should be displayed
+
+#endif  // MANDELBROT_CONFIG_H_
