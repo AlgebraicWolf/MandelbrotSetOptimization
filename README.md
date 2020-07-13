@@ -1,1 +1,1 @@
-MandelbrotSetOptimization
+# Mandelbrot set rendering optimization

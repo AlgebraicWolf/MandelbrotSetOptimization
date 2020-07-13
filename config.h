@@ -24,6 +24,15 @@ const unsigned int MAX_ITER = 50;      // Number of iterations after which seque
 
 // Benchmark settings
 const unsigned int BENCHMARK_ITERATIONS = 50;  // Number mandelbrot set rendering/display iterations
-// #define DISPLAY_BENCHMARK_FRAME                // Set this define in case benchmark frames should be displayed
+#define DISPLAY_BENCHMARK_FRAME                // Set this define in case benchmark frames should be displayed
+
+#define SIMD_OPTIMIZATION  // Set this define in order to enable parallelized functions (Requires AVX2 and FMA3 on machine)
+
+#define MULTITHREADING  // Set this define in order to enable multithreading
+
+#ifdef MULTITHREADING
+const unsigned int THREADS = 8;                                         // Number of threads for program to run
+const unsigned int THREAD_IMAGE_PART_HEIGHT = WINDOW_HEIGHT / THREADS;  // Height of chunk that is calculated in one thread
+#endif
 
 #endif  // MANDELBROT_CONFIG_H_
