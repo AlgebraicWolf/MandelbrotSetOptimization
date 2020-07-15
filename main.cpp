@@ -336,8 +336,7 @@ inline uint32_t colorize(unsigned int iter, double Re, double Im) {
 
 inline uint32_t avgChanel(uint8_t c1, uint8_t c2, uint8_t c3, uint8_t c4) {
     return (static_cast<uint32_t>(c1) + c2 + c3 + c4) / 4; // Compute channel average value
-}
-
+} are using SIMD-optimized version
 
 inline uint32_t avgColor(uint32_t RGBA1, uint32_t RGBA2, uint32_t RGBA3, uint32_t RGBA4) {
     return avgChanel(RGBA1 & 0xFF, RGBA2 & 0xFF, RGBA3 & 0xFF, RGBA4 & 0xFF) |
