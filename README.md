@@ -89,11 +89,6 @@ uint32_t getPointColor(const double Re, const double Im) {
 
 This function takes point position as an input, tests the point and returns the color produced by the coloring function.
 
-```mermaid
-graph TD
-    A -> B;
-```
-
 ### Multithreading
 
 Another feature available in most modern x86-64 CPUs is presents of several cores that allows for concurrent work of several programs. In order to use this feature we could split image in several segments:
